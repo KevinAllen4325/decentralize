@@ -1,0 +1,166 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+	<title>Decentralized Investing</title>
+	<link rel=icon href=assets/images/favicon.png>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}" >
+	<!--FONTS-->
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans:300,300i,400,400i,700|Roboto:400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lekton:400,700" rel="stylesheet">
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<!--JS-->
+	<script src="assets/js/countdown.js"></script>
+</head>
+
+<body>
+
+ <header id="particles-js">
+
+        <div class="header-text">
+            <div class="logo">
+                <img src="assets/images/logo.png">
+                <p>Decentralize.us</p>
+            </div>
+            <h1>The First Decentralized Investment System Powered&nbsp;By&nbsp;Solidity </h1>
+           <div class="header-overlay">
+               <!-- FOR COUNTDOWN TIMER-->
+               <script>
+               var thisYear = new Date().getFullYear();
+               var thisMonth = new Date().getMonth();
+               if(thisMonth > 2){
+               thisYear++;
+               }
+               var myCountdown4 = new Countdown({
+               year: thisYear,
+               month:6,
+               day:1,
+               hour:2,
+               ampm:"pm",
+               width:320,
+               height:60,
+               rangeHi: "month",
+               hideLine: 1,
+               numbers		: 	{
+               font 	: "Oswald",
+               color	: "#ffffff",
+               bkgd	: "#333333",
+               rounded	: 0.15,
+
+               },
+               labels : {
+               font   : "Oswald",
+               color  : "#bcbcbc",
+               weight : "normal" // < - no comma on last item!
+               }
+               });
+               </script>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="softcap">
+                        <div class="softcap-title">
+                            <p>Min goal</p>
+                        </div>
+                        <div class="softcap-amount">
+                            <p>$10,000,000</p>
+                        </div>
+                    </div>
+
+                </div>
+               <p>Some text that tells you how <span class="white"> important </span>it is to <span class="white">contribute</span></p>
+               <button>CONTRIBUTE</button>
+           </div>
+        </div><!--
+        --><div rel="#scroll" class="arrow-down link"><i class="fa fa-chevron-down"></i></div>
+    </header>
+
+    <nav id="scroll">
+        <div class="container">
+            <div class="nav-items">
+                <span rel="#about" class="link">PRODUCT</span>
+                <span rel="#team" class="link">TEAM</span>
+            </div>
+            <img src="assets/images/logo.png">
+            <div class="nav-items">
+                <span rel="#roadmap" class="link">ROADMAP</span>
+                <span rel="#documents" class="link">DOCUMENTS</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="about" id="about">
+        <div class="container">
+            <img src="assets/images/dec-photo.png" alt=""><!--
+
+         --><div class="about-text">
+                <h2>WHAT IS DECENTRALIZE.US?</h2>
+                <p><strong>We'll create the first solidity-powered decentralized&nbsp;investing&nbsp;system!</strong></p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team" id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <p class="team-subhead">Some text that gives a very brief description of how cool and&nbsp;talented&nbsp;we&nbsp;are</p>
+
+            <div class="team-grid">
+                <div class="member">
+                    <div class="photo" style="background-image: url(assets/images/team/team1.jpg)"></div>
+                    <p class="name">Jeff Pulwitzer</p>
+                    <p class="title">Business Director</p>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                </div><!--
+            --><div class="member">
+                    <div class="photo" style="background-image: url(assets/images/team/team2.jpg)"></div>
+                    <p class="name">Anna Hammerstein</p>
+                    <p class="title">Marketing Director</p>
+                    <p class="description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
+                </div><!--
+            --><div class="member">
+                    <div class="photo" style="background-image: url(assets/images/team/team3.jpg)"></div>
+                    <p class="name">David Polansky</p>
+                    <p class="title">Fullstack Developer</p>
+                    <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
+                </div><!--
+            --><div class="member">
+                    <div class="photo" style="background-image: url(assets/images/team/team4.jpg)"></div>
+                    <p class="name">Jessica Schlanger</p>
+                    <p class="title">Front End Developer</p>
+                    <p class="description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe.</p>
+                </div><!--
+            --><div class="member">
+                    <div class="photo" style="background-image: url(assets/images/team/team5.jpg)"></div>
+                    <p class="name">Adam Schreibman</p>
+                    <p class="title">UI/UX Designer</p>
+                    <p class="description">taque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis.</p>
+                </div><!--
+            --><div class="member">
+                    <div class="photo" style="background-image: url(assets/images/team/team6.jpg)"></div>
+                    <p class="name">Karen Zukerman</p>
+                    <p class="title">QA</p>
+                    <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="assets/js/particles.min.js"></script>
+	<script src="assets/js/jquery.easeScroll.js"></script>
+	<script src="assets/js/app.js"></script>
+
+</body>
+</html>
