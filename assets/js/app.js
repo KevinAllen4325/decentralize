@@ -1,5 +1,5 @@
 //Loads background "Particles" in header
-particlesJS.load('particles-js', 'assets/js/particles.json', function() {
+particlesJS.load('particles-js', '/assets/js/particles.json', function() {
     console.log('callback - particles.js config loaded');
 });
 
@@ -43,3 +43,8 @@ $("html").easeScroll({
     keyboardSupport: !0,
     arrowScroll: 50
 });
+
+$('.to-top').on('click', function () {
+    $("html, body").animate({ scrollTop: 0 }, 900, "swing");
+return false;
+})
