@@ -101,7 +101,7 @@
 
          --><div class="about-text">
                 <h2>WHAT IS DECENTRALIZE.US?</h2>
-                <p><strong>We'll create the first solidity-powered decentralized&nbsp;investing&nbsp;system!</strong></p>
+                <p><strong>We'll create the first Ethereum-powered decentralized&nbsp;investing&nbsp;system!</strong></p>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -136,37 +136,37 @@
             <p class="team-subhead">Some text that gives a very brief description of how cool and&nbsp;talented&nbsp;we&nbsp;are</p>
 
             <div class="team-grid">
-                <div class="member">
+                <div class="member fade-top">
                     <div class="photo" style="background-image: url(assets/images/team/team1.jpg)"></div>
                     <p class="name">Jeff Williams</p>
                     <p class="title">Business Director</p>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
                 </div><!--
-            --><div class="member">
+            --><div class="member fade-top">
                     <div class="photo" style="background-image: url(assets/images/team/team2.jpg)"></div>
                     <p class="name">Anna Richardson</p>
                     <p class="title">Marketing Director</p>
                     <p class="description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
                 </div><!--
-            --><div class="member">
+            --><div class="member fade-top">
                     <div class="photo" style="background-image: url(assets/images/team/team3.jpg)"></div>
                     <p class="name">David Brown</p>
                     <p class="title">Fullstack Developer</p>
                     <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
                 </div><!--
-            --><div class="member">
+            --><div class="member fade-bottom">
                     <div class="photo" style="background-image: url(assets/images/team/team4.jpg)"></div>
                     <p class="name">Jessica Foster</p>
                     <p class="title">Front End Developer</p>
                     <p class="description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe.</p>
                 </div><!--
-            --><div class="member">
+            --><div class="member fade-bottom">
                     <div class="photo" style="background-image: url(assets/images/team/team5.jpg)"></div>
                     <p class="name">Adam Thompson</p>
                     <p class="title">UI/UX Designer</p>
                     <p class="description">taque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis.</p>
                 </div><!--
-            --><div class="member">
+            --><div class="member fade-bottom">
                     <div class="photo" style="background-image: url(assets/images/team/team6.jpg)"></div>
                     <p class="name">Karen Johnson</p>
                     <p class="title">QA</p>
@@ -176,7 +176,7 @@
         </div>
     </div>
 
-    <div class="roadmap">
+    <div id="roadmap" class="roadmap">
         <div class="container">
             <h2>Roadmap</h2>
             <div class="road-container">
@@ -237,45 +237,71 @@
         </div>
     </div>
 
-    <div class="contribute" style="background: url(assets/images/code.png);">
+    <div class="contribute" style="background: url(assets/images/code.jpg);">
         <div class="overlay">
             <div class="grid-overlay" style="background: url(assets/images/grid2.png);">
                 <div class='container'>
                     <span class='pulse-button'>CONTRIBUTE</span>
                 </div>
             </div>
+            </div>
         </div>
     </div>
-
-    <!--<div class="documents">-->
-        <!--<a href="#whitepaper">-->
-        <!--<a href="#whitepaper">-->
-            <!--<div class="white-page">-->
-                <!--<img src="assets/images/white-paper.png">-->
-                <!--<p>White Page</p>-->
-            <!--</div>-->
-        <!--</a>-->
-        <!--<a href="#onepage">-->
-            <!--<div class="one-page">-->
-                <!--<img src="assets/images/one-page.png">-->
-                <!--<p>One Page</p>-->
-            <!--</div>-->
-        <!--</a>-->
-    <!--</div>-->
 
      <footer style="background-image: url(assets/images/footer.png)">
          <div class="to-top"><i class="fa fa-chevron-up"></i></div>
         <div class="container">
             <img src="assets/images/logo.png">
             <p>© Decentralize.us. All Rights Reserved</p>
-            <p><span>First Ethereum-powered Decentralized investing system</span> by <span>Decentralize.us</span></p>
+            <p><span>First solidty-powered Decentralized investing system</span> by&nbsp;<span>Decentralize.us</span></p>
         </div>
      </footer>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script src="assets/js/particles.min.js"></script>
 	<script src="assets/js/jquery.easeScroll.js"></script>
+     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	<script src="assets/js/app.js"></script>
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.about .container',{
+            scale:1,
+            origin: 'top',
+            duration: 1000,
+            delay: 150
+        });
+        sr.reveal('.benefits .container',{
+            scale:1,
+            duration: 1000,
+            delay: 150
+        });
+        sr.reveal('.checkL',{
+            origin: 'left',
+            duration: 1000,
+            delay: 150
+        });
+        sr.reveal('.checkR',{
+            origin: 'right',
+            duration: 1000,
+            delay: 250
+        });
+        sr.reveal('.checkC',{
+            origin: 'bottom',
+            duration: 1000,
+            delay: 150
+        });
+
+        sr.reveal('.fade-top',{
+            origin: 'top',
+            duration: 1000,
+            delay: 150
+        });
+        sr.reveal('.fade-bottom',{
+            origin: 'bottom',
+            duration: 1000,
+            delay: 150
+        });
+    </script>
 
 </body>
 </html>
