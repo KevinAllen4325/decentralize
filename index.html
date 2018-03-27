@@ -136,41 +136,53 @@
             <p class="team-subhead">Some text that gives a very brief description of how cool and&nbsp;talented&nbsp;we&nbsp;are</p>
 
             <div class="team-grid">
-                <div class="member fade-top">
-                    <div class="photo" style="background-image: url(assets/images/team/team1.jpg)"></div>
-                    <p class="name">Jeff Williams</p>
-                    <p class="title">Business Director</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                <div class="member ">
+                    <div class="photo fade-top" style="background-image: url(assets/images/team/team1.jpg)"></div>
+                    <div class="fade-top-name">
+                        <p class="name">Jeff Williams</p>
+                        <p class="title">Business Director</p>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                    </div>
                 </div><!--
-            --><div class="member fade-top">
-                    <div class="photo" style="background-image: url(assets/images/team/team2.jpg)"></div>
-                    <p class="name">Anna Richardson</p>
-                    <p class="title">Marketing Director</p>
-                    <p class="description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
+            --><div class="member">
+                    <div class="photo fade-top" style="background-image: url(assets/images/team/team2.jpg)"></div>
+                    <div class="fade-top-name">
+                        <p class="name">Anna Richardson</p>
+                        <p class="title">Marketing Director</p>
+                        <p class="description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
+                    </div>
                 </div><!--
             --><div class="member fade-top">
                     <div class="photo" style="background-image: url(assets/images/team/team3.jpg)"></div>
-                    <p class="name">David Brown</p>
-                    <p class="title">Fullstack Developer</p>
-                    <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
+                    <div class="fade-top-name">
+                        <p class="name">David Brown</p>
+                        <p class="title">Fullstack Developer</p>
+                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
+                    </div>
                 </div><!--
-            --><div class="member fade-bottom">
-                    <div class="photo" style="background-image: url(assets/images/team/team4.jpg)"></div>
-                    <p class="name">Jessica Foster</p>
-                    <p class="title">Front End Developer</p>
-                    <p class="description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe.</p>
+            --><div class="member">
+                    <div class="photo fade-top" style="background-image: url(assets/images/team/team4.jpg)"></div>
+                    <div class="fade-top-name">
+                        <p class="name">Jessica Foster</p>
+                        <p class="title">Front End Developer</p>
+                        <p class="description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe.</p>
+                    </div>
                 </div><!--
-            --><div class="member fade-bottom">
-                    <div class="photo" style="background-image: url(assets/images/team/team5.jpg)"></div>
-                    <p class="name">Adam Thompson</p>
-                    <p class="title">UI/UX Designer</p>
-                    <p class="description">taque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis.</p>
+            --><div class="member">
+                    <div class="photo fade-top" style="background-image: url(assets/images/team/team5.jpg)"></div>
+                    <div class="fade-top-name">
+                        <p class="name">Adam Thompson</p>
+                        <p class="title">UI/UX Designer</p>
+                        <p class="description">taque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis.</p>
+                    </div>
                 </div><!--
-            --><div class="member fade-bottom">
-                    <div class="photo" style="background-image: url(assets/images/team/team6.jpg)"></div>
-                    <p class="name">Karen Johnson</p>
-                    <p class="title">QA</p>
-                    <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+            --><div class="member">
+                    <div class="photo fade-top" style="background-image: url(assets/images/team/team6.jpg)"></div>
+                    <div class="fade-top-name">
+                        <p class="name">Karen Johnson</p>
+                        <p class="title">QA</p>
+                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -288,16 +300,19 @@
         sr.reveal('.checkC',{
             origin: 'bottom',
             duration: 700,
-            delay: 150
+            delay: 150,
+            scale:1
         });
 
         sr.reveal('.fade-top',{
             origin: 'top',
+            scale: 1,
             duration: 700,
             delay: 150
         });
-        sr.reveal('.fade-bottom',{
-            origin: 'bottom',
+        sr.reveal('.fade-top-name',{
+            origin: 'top',
+            scale: 1,
             duration: 700,
             delay: 150
         });
