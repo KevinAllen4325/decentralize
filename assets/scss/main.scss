@@ -486,7 +486,6 @@ nav{
           width: 400px;
           padding: 15px;
           background-color:#E78200;
-          background-image: url(assets/images/grid.png);
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -566,7 +565,6 @@ nav{
 .contribute{
   height: 150px;
   width: 100%;
-  background: url(assets/images/code.png);
   background-size: cover;
   background-repeat: no-repeat;
   .overlay{
@@ -576,7 +574,6 @@ nav{
     .grid-overlay{
       width: 100%;
       height: 100%;
-      background: url(assets/images/grid2.png);
       .container{
         display: flex;
         align-items: center;
@@ -675,12 +672,11 @@ nav{
       }
     }
   }
-    
+
 }
 
 //FOOTER
 footer{
-  background-image: url(assets/images/footer.png);
   padding: 30px;
   position: relative;
   .to-top{
