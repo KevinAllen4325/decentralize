@@ -74,7 +74,7 @@
             </div>
             <p>Some text that tells you how <span class="white"> important </span>it is to <span class="white">contribute</span>
             </p>
-            <button>CONTRIBUTE</button>
+            <button class="contribute-button">CONTRIBUTE</button>
         </div>
     </div>
     <!--
@@ -196,6 +196,10 @@
         <h2>Roadmap</h2>
         <div class="road-container">
             <div class="road"></div>
+
+            <!--Add class 'completed' to checkpoint div to mark them off on the page-->
+
+            <!--FIRST CHECKPOINT-->
             <div class="checkpoint completed">
                 <div class="checkL">
                     <div class="triangleL" style="background-image: url(assets/images/grid.png);"></div>
@@ -206,6 +210,8 @@
                     </div>
                 </div>
             </div>
+
+            <!--SECOND CHECKPOINT-->
             <div class="checkpoint completed">
                 <div class="checkR">
                     <div class="triangleR" style="background-image: url(assets/images/grid.png);"></div>
@@ -217,6 +223,8 @@
                     </div>
                 </div>
             </div>
+
+            <!--THIRD CHECKPOINT-->
             <div class="checkpoint">
                 <div class="checkL">
                     <div class="triangleL" style="background-image: url(assets/images/grid.png);"></div>
@@ -229,6 +237,8 @@
                     </div>
                 </div>
             </div>
+
+            <!--FOURTH CHECKPOINT-->
             <div class="checkpoint">
                 <div class="checkR" style="background-image: url(assets/images/grid.png);">
                     <div class="triangleR"></div>
@@ -239,6 +249,8 @@
                     </div>
                 </div>
             </div>
+
+            <!--FIFTH CHECKPOINT-->
             <div class="checkpoint">
                 <div class="checkC" style="background-image: url(assets/images/grid.png);">
                     <div class="triangleC"></div>
@@ -255,7 +267,7 @@
 <div class="contribute" style="background-image: url(assets/images/code.jpg);">
     <div class="overlay">
         <div class="grid-overlay" style="background-image: url(assets/images/grid2.png);">
-            <div class='container'> <span class='pulse-button'>CONTRIBUTE</span>
+            <div class='container'> <span class='pulse-button contribute-button'>CONTRIBUTE</span>
             </div>
         </div>
     </div>
@@ -271,27 +283,32 @@
 </footer>
 
 <!--FORM OVERLAY-->
-<!--<div class="contribute-overlay">-->
-    <!--<div class="blue-bar">-->
-        <!--<p>$<span class="current-amount"></span><br><span class="raised">Total raised</span></p>-->
-    <!--</div>-->
-    <!--<div class="contribute-form">-->
-        <!--<form action="/">-->
-            <!--<label for="first"><input id="first" type="radio" name="amount" value="50" style="margin-right: 20px;"> $50.00</label>-->
+<div class="contribute-overlay">
+    <div class="blue-bar">
+        <p class="close-button">X</p>
+        <p>$<span class="current-amount"></span><br><span class="raised">Total raised</span></p>
+    </div>
+    <div class="contribute-form">
+        <form action="/">
+            <label for="first"><input id="first" type="radio" name="amount" value="50" style="margin-right: 20px;" onchange="selected(this)"> $50.00</label>
 
-            <!--<label for="second"><input id="second" type="radio" name="amount" value="100" style="margin-right: 20px;"> $100.00</label>-->
+            <label for="second"><input id="second" type="radio" name="amount" value="100" style="margin-right: 20px;" onchange="selected(this)"> $100.00</label>
 
-            <!--<label for="third"><input id="third" type="radio" name="amount" value="250" style="margin-right: 20px;"> $250.00</label>-->
+            <label for="third"><input id="third" type="radio" name="amount" value="250" style="margin-right: 20px;" onchange="selected(this)"> $250.00</label>
 
-            <!--<label for="fourth"><input id="fourth" type="radio" name="amount" value="250" style="margin-right: 20px;"> $<input type="number" name="custom" ></label>-->
+            <label for="fourth"><input id="fourth" type="radio" name="amount" value="250" style="margin-right: 20px;" onchange="selected(this)"> $<input type="number" name="custom" id="custom" onfocus="selected(this)">
+            <br> <span class="custom-text">Type custom amount</span>
+            </label>
 
+            <button type="button">Submit</button>
 
-        <!--</form>-->
-    <!--</div>-->
-    <!--<div class="progress-bar">-->
-        <!--<div class="progress" id="progress2"></div>-->
-    <!--</div>-->
-<!--</div>-->
+            <p class="refund">If you'd like a refund on a previous purchase, please follow the steps <span class="refund-page">here</span>.</p>
+        </form>
+    </div>
+    <div class="progress-bar">
+        <div class="progress" id="progress2"></div>
+    </div>
+</div>
 
 <!--JAVASCRIPT-->
 <script src="assets/js/jquery.min.js"></script>
@@ -346,10 +363,32 @@
         delay: 250
     });
 
-    if($('input[type=radio]:checked'))
-        $(this).parent().css("color", "black");
-    else
-        $(this).parent().css("color", "#878787")
+    function selected(ele){
+        $('#fourth').prop('checked', false);
+        var element = "#"+ ele.id;
+        $(element).parent().css('color', 'black').siblings().css('color', '#878787')
+
+        if($('#custom').is(':focus'))
+            $('#fourth').prop('checked', true);
+        else
+            $('#custom').val('');
+    }
+
+
+
+    $('.contribute-button').on('click', function() {
+        $('.contribute-overlay').css('display', 'flex');
+        $('.contribute-overlay').addClass('opacity', 200)
+
+    })
+
+    $('.close-button').on('click', function() {
+        $('.contribute-overlay').fadeOut('fast');
+        setTimeout(function() {
+            $('.contribute-overlay').removeClass('opacity');
+        }, 200)
+    });
+
 </script>
 </body>
 
