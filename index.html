@@ -1,322 +1,356 @@
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
 <head>
-	<title>Decentralized Investing</title>
-	<link rel=icon href=assets/images/favicon.png>
-	<meta charset="utf-8" >
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
-	<link rel="home" href="{{ siteUrl }}" >
-	<!--FONTS-->
-	<link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans:300,300i,400,400i,700|Roboto:400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700" rel="stylesheet">
+    <title>Decentralized Investing</title>
+    <link rel=icon href='assets/images/favicon.png'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="home" href="/">
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700%7COpen+Sans:300,300i,400,400i,600,700%7CRoboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lekton:400,700" rel="stylesheet">
-	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<!--JS-->
-	<script src="assets/js/countdown.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!--JS-->
+    <script src="assets/js/countdown.js"></script>
 </head>
 
 <body>
+<header id="particles-js">
+    <div class="header-text">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Decentralize.us Logo">
+            <p>Decentralize.us</p>
+        </div>
+        <h1>The First Decentralized Investment System Powered&nbsp;By&nbsp;Ethereum </h1>
+        <div class="header-overlay">
+            <!-- FOR COUNTDOWN TIMER-->
+            <script>
+                var thisYear = new Date().getFullYear();
+                var thisMonth = new Date().getMonth();
+                if(thisMonth > 2){
+                    thisYear++;
+                }
+                var myCountdown4 = new Countdown({
+                    year: thisYear,
+                    month:6,
+                    day:1,
+                    hour:2,
+                    ampm:"pm",
+                    width:320,
+                    height:60,
+                    rangeHi: "month",
+                    hideLine: 1,
+                    numbers		: 	{
+                        font 	: "Oswald",
+                        color	: "#ffffff",
+                        bkgd	: "#333333",
+                        rounded	: 0.15,
 
- <header id="particles-js">
-
-        <div class="header-text">
-            <div class="logo">
-                <img src="assets/images/logo.png">
-                <p>Decentralize.us</p>
-            </div>
-            <h1>The First Decentralized Investment System Powered&nbsp;By&nbsp;Ethereum </h1>
-           <div class="header-overlay">
-               <!-- FOR COUNTDOWN TIMER-->
-               <script>
-               var thisYear = new Date().getFullYear();
-               var thisMonth = new Date().getMonth();
-               if(thisMonth > 2){
-               thisYear++;
-               }
-               var myCountdown4 = new Countdown({
-               year: thisYear,
-               month:6,
-               day:1,
-               hour:2,
-               ampm:"pm",
-               width:320,
-               height:60,
-               rangeHi: "month",
-               hideLine: 1,
-               numbers		: 	{
-               font 	: "Oswald",
-               color	: "#ffffff",
-               bkgd	: "#333333",
-               rounded	: 0.15,
-
-               },
-               labels : {
-               font   : "Oswald",
-               color  : "#bcbcbc",
-               weight : "normal" // < - no comma on last item!
-               }
-               });
-               </script>
-                <div class="progress-container">
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                    <div class="softcap">
-                        <div class="softcap-title">
-                            <p>Min goal</p>
-                        </div>
-                        <div class="softcap-amount">
-                            <p>$10,000,000</p>
-                        </div>
-                    </div>
-
+                    },
+                    labels : {
+                        font   : "Oswald",
+                        color  : "#bcbcbc",
+                        weight : "normal" // < - no comma on last item!
+                    }
+                });
+            </script>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
                 </div>
-               <p>Some text that tells you how <span class="white"> important </span>it is to <span class="white">contribute</span></p>
-               <button>CONTRIBUTE</button>
-           </div>
-        </div><!--
-        --><div rel="#scroll" class="arrow-down link"><i class="fa fa-chevron-down"></i></div>
-    </header>
-
-    <nav id="scroll">
-        <div class="container">
-            <div class="nav-items">
-                <span rel="#about" class="link">PRODUCT</span>
-                <span rel="#team" class="link">TEAM</span>
-            </div>
-            <img src="assets/images/logo.png">
-            <div class="nav-items">
-                <span rel="#roadmap" class="link">ROADMAP</span>
-                <span rel="#documents" class="link">WHITE-PAPER</span>
-            </div>
-        </div>
-    </nav>
-
-    <div class="about" id="about">
-        <div class="container">
-            <img src="assets/images/dec-photo.png" alt=""><!--
-
-         --><div class="about-text">
-                <h2>WHAT IS DECENTRALIZE.US?</h2>
-                <p><strong>We'll create the first Ethereum-powered decentralized&nbsp;investing&nbsp;system!</strong></p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="benefits">
-        <div class="container">
-            <div class="benefit-item">
-                <img src="assets/images/chains.png">
-                <p class="benefit-header">Blockchain</p>
-                <p class="benefit-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-            </div>
-            <div class="benefit-item">
-                <img src="assets/images/money.png">
-                <p class="benefit-header">DEC Token</p>
-                <p class="benefit-text">Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
-            </div>
-            <div class="benefit-item">
-                <img src="assets/images/shield.png">
-                <p class="benefit-header">Secure</p>
-                <p class="benefit-text">Nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="team" id="team">
-        <div class="container">
-            <h2>Our Team</h2>
-            <p class="team-subhead">Some text that gives a very brief description of how cool and&nbsp;talented&nbsp;we&nbsp;are</p>
-
-            <div class="team-grid">
-                <div class="member ">
-                    <div class="photo fade-top" style="background-image: url(assets/images/team/team1.jpg)"></div>
-                    <div class="fade-top-name">
-                        <p class="name">Jeff Williams</p>
-                        <p class="title">Business Director</p>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                <div class="softcap">
+                    <div class="softcap-title">
+                        <p>Min goal</p>
                     </div>
-                </div><!--
+                    <div class="softcap-amount">
+                        <p>$10,000,000</p>
+                    </div>
+                </div>
+            </div>
+            <p>Some text that tells you how <span class="white"> important </span>it is to <span class="white">contribute</span>
+            </p>
+            <button>CONTRIBUTE</button>
+        </div>
+    </div>
+    <!--
+    -->
+    <div rel="#scroll" class="arrow-down link"><i class="fa fa-chevron-down"></i>
+    </div>
+</header>
+
+<nav id="scroll">
+    <div class="container">
+        <div class="nav-items"> <span rel="#about" class="link">PRODUCT</span>
+            <span rel="#team" class="link">TEAM</span>
+        </div>
+        <img src="assets/images/logo.png" alt="Decentralize.us Logo">
+        <div class="nav-items"> <span rel="#roadmap" class="link">ROADMAP</span>
+            <span rel="#documents" class="link">WHITE-PAPER</span>
+        </div>
+    </div>
+</nav>
+
+<div class="about" id="about">
+    <div class="container">
+        <img src="assets/images/dec-photo.png" alt=""><!--
+        --><div class="about-text">
+            <h2>WHAT IS DECENTRALIZE.US?</h2>
+            <p><strong>We'll create the first Ethereum-powered decentralized&nbsp;investing&nbsp;system!</strong>
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        </div>
+    </div>
+</div>
+
+<div class="benefits">
+    <div class="container">
+        <div class="benefit-item">
+            <img src="assets/images/chains.png" alt="Blockchain Technology">
+            <p class="benefit-header">Blockchain</p>
+            <p class="benefit-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+        </div>
+        <div class="benefit-item">
+            <img src="assets/images/money.png" alt="DEC Tokens">
+            <p class="benefit-header">DEC Token</p>
+            <p class="benefit-text">Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+        </div>
+        <div class="benefit-item">
+            <img src="assets/images/shield.png" alt="Secure">
+            <p class="benefit-header">Secure</p>
+            <p class="benefit-text">Nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+</div>
+
+<div class="team" id="team">
+    <div class="container">
+        <h2>Our Team</h2>
+        <p class="team-subhead">Some text that gives a very brief description of how cool and&nbsp;talented&nbsp;we&nbsp;are</p>
+        <div class="team-grid">
+            <div class="member ">
+                <div class="photo fade-top" style="background-image: url(assets/images/team/team1.jpg)"></div>
+                <div class="fade-top-name">
+                    <p class="name">Jeff Williams</p>
+                    <p class="title">Business Director</p>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                </div>
+            </div><!--
+
             --><div class="member">
-                    <div class="photo fade-top" style="background-image: url(assets/images/team/team2.jpg)"></div>
-                    <div class="fade-top-name">
-                        <p class="name">Anna Richardson</p>
-                        <p class="title">Marketing Director</p>
-                        <p class="description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
-                    </div>
-                </div><!--
+                <div class="photo fade-top" style="background-image: url(assets/images/team/team2.jpg)"></div>
+                <div class="fade-top-name">
+                    <p class="name">Anna Richardson</p>
+                    <p class="title">Marketing Director</p>
+                    <p class="description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
+                </div>
+            </div><!--
+
             --><div class="member fade-top">
-                    <div class="photo" style="background-image: url(assets/images/team/team3.jpg)"></div>
-                    <div class="fade-top-name">
-                        <p class="name">David Brown</p>
-                        <p class="title">Fullstack Developer</p>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
-                    </div>
-                </div><!--
+                <div class="photo" style="background-image: url(assets/images/team/team3.jpg)"></div>
+                <div class="fade-top-name">
+                    <p class="name">David Brown</p>
+                    <p class="title">Fullstack Developer</p>
+                    <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
+                </div>
+            </div><!--
+
             --><div class="member">
-                    <div class="photo fade-top" style="background-image: url(assets/images/team/team4.jpg)"></div>
-                    <div class="fade-top-name">
-                        <p class="name">Jessica Foster</p>
-                        <p class="title">Front End Developer</p>
-                        <p class="description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe.</p>
-                    </div>
-                </div><!--
+                <div class="photo fade-top" style="background-image: url(assets/images/team/team4.jpg)"></div>
+                <div class="fade-top-name">
+                    <p class="name">Jessica Foster</p>
+                    <p class="title">Front End Developer</p>
+                    <p class="description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe.</p>
+                </div>
+            </div><!--
+
             --><div class="member">
-                    <div class="photo fade-top" style="background-image: url(assets/images/team/team5.jpg)"></div>
-                    <div class="fade-top-name">
-                        <p class="name">Adam Thompson</p>
-                        <p class="title">UI/UX Designer</p>
-                        <p class="description">taque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis.</p>
-                    </div>
-                </div><!--
+                <div class="photo fade-top" style="background-image: url(assets/images/team/team5.jpg)"></div>
+                <div class="fade-top-name">
+                    <p class="name">Adam Thompson</p>
+                    <p class="title">UI/UX Designer</p>
+                    <p class="description">taque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis.</p>
+                </div>
+            </div><!--
+
             --><div class="member">
-                    <div class="photo fade-top" style="background-image: url(assets/images/team/team6.jpg)"></div>
-                    <div class="fade-top-name">
-                        <p class="name">Karen Johnson</p>
-                        <p class="title">QA</p>
-                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                <div class="photo fade-top" style="background-image: url(assets/images/team/team6.jpg)"></div>
+                <div class="fade-top-name">
+                    <p class="name">Karen Johnson</p>
+                    <p class="title">QA</p>
+                    <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="roadmap" class="roadmap">
+    <div class="container">
+        <h2>Roadmap</h2>
+        <div class="road-container">
+            <div class="road"></div>
+            <div class="checkpoint completed">
+                <div class="checkL">
+                    <div class="triangleL" style="background-image: url(assets/images/grid.png);"></div>
+                    <div class="text">
+                        <p class="header">Our first checkpoint</p>
+                        <p class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p class="items">Ut enim ad minim veniam, quis nostrud</p>
+                    </div>
+                </div>
+            </div>
+            <div class="checkpoint completed">
+                <div class="checkR">
+                    <div class="triangleR" style="background-image: url(assets/images/grid.png);"></div>
+                    <div class="text">
+                        <p class="header">Balls rolling now</p>
+                        <p class="items">Ut enim ad minim veniam, quis nostrud</p>
+                        <p class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p class="items">Duis aute irure dolor in reprehenderit in voluptate velit</p>
+                    </div>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div class="checkL">
+                    <div class="triangleL" style="background-image: url(assets/images/grid.png);"></div>
+                    <div class="text">
+                        <p class="header">Our third checkpoint</p>
+                        <p class="items">Duis aute irure dolor in reprehenderit in voluptate velit</p>
+                        <p class="items">Excepteur sint occaecat cupidatat</p>
+                        <p class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p class="items">Ut enim ad minim veniam, quis nostrud</p>
+                    </div>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div class="checkR" style="background-image: url(assets/images/grid.png);">
+                    <div class="triangleR"></div>
+                    <div class="text">
+                        <p class="header">I'm proud we got this far</p>
+                        <p class="items">Ut enim ad minim veniam, quis nostrud</p>
+                        <p class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div class="checkC" style="background-image: url(assets/images/grid.png);">
+                    <div class="triangleC"></div>
+                    <div class="text">
+                        <p class="header">We're ready to launch!</p>
+                        <p class="items">Duis aute irure dolor in reprehenderit in voluptate velit</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div id="roadmap" class="roadmap">
-        <div class="container">
-            <h2>Roadmap</h2>
-            <div class="road-container">
-                <div class="road"></div>
-                <div class="checkpoint completed">
-                    <div class="checkL">
-                        <div class="triangleL" style="background-image: url(assets/images/grid.png);"></div>
-                        <div class="text">
-                            <p class="header">Our first checkpoint</p>
-                            <p class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p class="items">Ut enim ad minim veniam, quis nostrud</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="checkpoint completed">
-                    <div class="checkR">
-                        <div class="triangleR" style="background-image: url(assets/images/grid.png);"></div>
-                        <div class="text">
-                            <p class="header">Balls rolling now</p>
-                            <p class="items">Ut enim ad minim veniam, quis nostrud</p>
-                            <p class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p class="items"> Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="checkpoint">
-                    <div class="checkL">
-                        <div class="triangleL" style="background-image: url(assets/images/grid.png);"></div>
-                        <div class="text">
-                            <p class="header">Our third checkpoint</p>
-                            <p class="items"> Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                            <p class="items">Excepteur sint occaecat cupidatat</p>
-                            <p class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p class="items">Ut enim ad minim veniam, quis nostrud</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="checkpoint">
-                    <div class="checkR" style="background-image: url(assets/images/grid.png);">
-                        <div class="triangleR"></div>
-                        <div class="text">
-                            <p class="header">I'm proud we got this far</p>
-                            <p class="items">Ut enim ad minim veniam, quis nostrud</p>
-                            <p class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="checkpoint">
-                    <div class="checkC" style="background-image: url(assets/images/grid.png);">
-                        <div class="triangleC"></div>
-                        <div class="text">
-                            <p class="header">We're ready to launch!</p>
-                            <p class="items"> Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                        </div>
-                    </div>
-                </div>
+<div class="contribute" style="background-image: url(assets/images/code.jpg);">
+    <div class="overlay">
+        <div class="grid-overlay" style="background-image: url(assets/images/grid2.png);">
+            <div class='container'> <span class='pulse-button'>CONTRIBUTE</span>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="contribute" style="background-image: url(assets/images/code.jpg);">
-        <div class="overlay">
-            <div class="grid-overlay" style="background-image: url(assets/images/grid2.png);">
-                <div class='container'>
-                    <span class='pulse-button'>CONTRIBUTE</span>
-                </div>
-            </div>
-            </div>
-        </div>
+<footer style="background-image: url(assets/images/footer.png)">
+    <div class="container">
+        <img src="assets/images/logo.png" alt="Decentralize.us Logo">
+        <p>© Decentralize.us. All Rights Reserved</p>
+        <p><span>First solidty-powered Decentralized investing system</span> by&nbsp;<span>Decentralize.us</span>
+        </p>
     </div>
+</footer>
 
-     <footer style="background-image: url(assets/images/footer.png)">
-         <div class="to-top"><i class="fa fa-chevron-up"></i></div>
-        <div class="container">
-            <img src="assets/images/logo.png">
-            <p>© Decentralize.us. All Rights Reserved</p>
-            <p><span>First solidty-powered Decentralized investing system</span> by&nbsp;<span>Decentralize.us</span></p>
-        </div>
-     </footer>
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-	<script src="assets/js/particles.min.js"></script>
-	<script src="assets/js/jquery.easeScroll.js"></script>
-     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-	<script src="assets/js/app.js"></script>
-    <script>
-        window.sr = ScrollReveal();
-        sr.reveal('.about .container',{
-            scale:1,
-            origin: 'top',
-            duration: 700,
-            delay: 150
-        });
-        sr.reveal('.benefits .container',{
-            scale:1,
-            duration: 700,
-            delay: 150
-        });
-        sr.reveal('.checkL',{
-            origin: 'left',
-            duration: 700,
-            delay: 150
-        });
-        sr.reveal('.checkR',{
-            origin: 'right',
-            duration: 700,
-            delay: 150
-        });
-        sr.reveal('.checkC',{
-            origin: 'bottom',
-            duration: 700,
-            delay: 150,
-            scale:1
-        });
+<!--FORM OVERLAY-->
+<!--<div class="contribute-overlay">-->
+    <!--<div class="blue-bar">-->
+        <!--<p>$<span class="current-amount"></span><br><span class="raised">Total raised</span></p>-->
+    <!--</div>-->
+    <!--<div class="contribute-form">-->
+        <!--<form action="/">-->
+            <!--<label for="first"><input id="first" type="radio" name="amount" value="50" style="margin-right: 20px;"> $50.00</label>-->
 
-        sr.reveal('.fade-top',{
-            origin: 'top',
-            scale: 1,
-            duration: 700,
-            delay: 150
-        });
-        sr.reveal('.fade-top-name',{
-            origin: 'bottom',
-            scale: 1,
-            duration: 700,
-            delay: 150
-        });
-    </script>
+            <!--<label for="second"><input id="second" type="radio" name="amount" value="100" style="margin-right: 20px;"> $100.00</label>-->
 
+            <!--<label for="third"><input id="third" type="radio" name="amount" value="250" style="margin-right: 20px;"> $250.00</label>-->
+
+            <!--<label for="fourth"><input id="fourth" type="radio" name="amount" value="250" style="margin-right: 20px;"> $<input type="number" name="custom" ></label>-->
+
+
+        <!--</form>-->
+    <!--</div>-->
+    <!--<div class="progress-bar">-->
+        <!--<div class="progress" id="progress2"></div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--JAVASCRIPT-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="assets/js/particles.min.js"></script>
+<script src="assets/js/jquery.easeScroll.js"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/contribute.js"></script>
+<script>
+    window.sr = ScrollReveal();
+    sr.reveal('.about .container',{
+        scale:1,
+        origin: 'top',
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.benefits .container',{
+        scale:1,
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.checkL',{
+        origin: 'left',
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.checkR',{
+        origin: 'right',
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.checkC',{
+        origin: 'bottom',
+        duration: 500,
+        delay: 250,
+        scale:1
+    });
+
+    sr.reveal('.fade-top',{
+        origin: 'top',
+        scale: 1,
+        distance:0,
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.fade-top-name',{
+        origin: 'bottom',
+        scale: 1,
+        distance:0,
+        duration: 500,
+        delay: 250
+    });
+
+    if($('input[type=radio]:checked'))
+        $(this).parent().css("color", "black");
+    else
+        $(this).parent().css("color", "#878787")
+</script>
 </body>
+
 </html>
