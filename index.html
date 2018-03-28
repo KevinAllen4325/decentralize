@@ -296,11 +296,11 @@
 
             <label for="third"><input id="third" type="radio" name="amount" value="250" style="margin-right: 20px;" onchange="selected(this)"> $250.00</label>
 
-            <label for="fourth"><input id="fourth" type="radio" name="amount" value="250" style="margin-right: 20px;" onchange="selected(this)"> $<input type="number" name="custom" id="custom" onfocus="selected(this)">
+            <label for="fourth"><input id="fourth" type="radio" name="amount" style="margin-right: 20px;" onchange="selected(this)"> $<input type="number" name="custom" id="custom" onfocus="selected(this)">
             <br> <span class="custom-text">Type custom amount</span>
             </label>
 
-            <button type="button">Submit</button>
+            <button type="button" onclick="doSubmit()">Submit</button>
 
             <p class="refund">If you'd like a refund on a previous purchase, please follow the steps <span class="refund-page">here</span>.</p>
         </form>
@@ -318,81 +318,6 @@
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/contribute.js"></script>
-<script>
-    window.sr = ScrollReveal();
-    sr.reveal('.about .container',{
-        scale:1,
-        origin: 'top',
-        duration: 500,
-        delay: 250
-    });
-    sr.reveal('.benefits .container',{
-        scale:1,
-        duration: 500,
-        delay: 250
-    });
-    sr.reveal('.checkL',{
-        origin: 'left',
-        duration: 500,
-        delay: 250
-    });
-    sr.reveal('.checkR',{
-        origin: 'right',
-        duration: 500,
-        delay: 250
-    });
-    sr.reveal('.checkC',{
-        origin: 'bottom',
-        duration: 500,
-        delay: 250,
-        scale:1
-    });
-
-    sr.reveal('.fade-top',{
-        origin: 'top',
-        scale: 1,
-        distance:0,
-        duration: 500,
-        delay: 250
-    });
-    sr.reveal('.fade-top-name',{
-        origin: 'bottom',
-        scale: 1,
-        distance:0,
-        duration: 500,
-        delay: 250
-    });
-
-    function selected(ele){
-        $('#fourth').prop('checked', false);
-        var element = "#"+ ele.id;
-        $(element).parent().css('color', 'black').siblings().css('color', '#878787')
-
-        if($('#custom').is(':focus'))
-            $('#fourth').prop('checked', true);
-        else
-            $('#custom').val('');
-    }
-
-
-
-    $('.contribute-button').on('click', function() {
-
-        $('.contribute-overlay').css('display', 'flex');
-        $('.contribute-overlay').addClass('opacity', 200)
-
-    })
-
-    $('.close-button').on('click', function() {
-        $('.contribute-overlay').fadeOut('fast');
-        setTimeout(function() {
-            $('.contribute-overlay').removeClass('opacity');
-            document.getElementById('contributionForm').reset()
-            $('label').css('color', '#878787');
-        }, 200)
-    });
-
-</script>
 </body>
 
 </html>
