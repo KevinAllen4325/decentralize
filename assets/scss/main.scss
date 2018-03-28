@@ -1,16 +1,13 @@
-//@import "compass/css3";
+$mainBlue: #58A4B0;
+$mainPurple: #533A7B;
+$mainOrange: #E78200;
+
 *{
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  //-webkit-transition: all .25s;
-  //-moz-transition: all .25s;
-  //-ms-transition: all .25s;
-  //-o-transition: all .25s;
-  //transition: all .25s;
-
 }
 
 //Changes scrollbar style only on chrome. Any other browser will use default scrollbar
@@ -67,7 +64,7 @@ header{
   background: -o-linear-gradient(top, rgba(83,58,123,1) 0%, rgba(0,0,0,1) 100%);
   background: -ms-linear-gradient(top, rgba(83,58,123,1) 0%, rgba(0,0,0,1) 100%);
   background: linear-gradient(to bottom, rgba(83,58,123,1) 0%, rgba(0,0,0,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#533a7b', endColorstr='#000000', GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$mainPurple', endColorstr='#000000', GradientType=0 );
   display: flex;
   align-items:center;
   justify-content: center;
@@ -125,7 +122,7 @@ header{
      text-align: center;
      .progress-container{
        position: relative;
-       margin: 20px auto 0;
+       margin: 0 auto;
        width: 85%;
 
        .progress-bar{
@@ -139,8 +136,8 @@ header{
          right:0;
          top: 0;
          .progress{
-           width: 20%;
-           background: #58A4B0;
+           width: 0;
+           background: $mainBlue;
            border-radius: 25px;
            height: 100%;
          }
@@ -245,6 +242,9 @@ header{
   ;
   }
 }
+#Stage_jbeeb_3{
+  margin-bottom: 20px!important;
+}
 .arrow-down{
   position: absolute;
   bottom: 0;
@@ -292,7 +292,7 @@ nav{
        color: #222;
        cursor: pointer;
        &:hover{
-         color: #58A4B0;
+         color: $mainBlue;
        }
      }
    }
@@ -487,7 +487,7 @@ nav{
         .checkL, .checkR, .checkC{
           width: 400px;
           padding: 15px;
-          background-color:#E78200;
+          background-color:$mainOrange;
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -496,7 +496,7 @@ nav{
           .triangleL, .triangleR, .triangleC{
             width: 20px;
             height: 20px;
-            background: #E78200;
+            background: $mainOrange;
             position: absolute;
             top: 4px;
             transform: rotate(45deg);
@@ -558,7 +558,7 @@ nav{
         }
       }
       .completed{
-        background-color: #58A4B0 !important;
+        background-color: $mainBlue !important;
       }
     }
   }
@@ -596,7 +596,7 @@ nav{
           border: none;
           border-radius: 5px;
           line-height: 60px;
-          background: #58A4B0;
+          background: $mainBlue;
           cursor: pointer;
           box-shadow: 0 0 0 0 rgba(88, 164, 176, 0.5);
           animation: pulsing 1.5s infinite;
@@ -624,29 +624,29 @@ nav{
   }
 }
 
+.to-top{
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, .7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  z-index: 300000;
+  cursor: pointer;
+  i{
+    line-height: 18px;
+    font-size: 18px;
+    color: white;
+  }
+}
+
 //FOOTER
 footer{
   padding: 30px 0;
   position: relative;
-  .to-top{
-    width: 35px;
-    height: 35px;
-    background: rgba(0, 0, 0, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -17.5px;
-    left: 0;
-    cursor: pointer;
-    right: 0;
-    margin: 0 auto;
-    i{
-      line-height: 18px;
-      font-size: 18px;
-      color: white;
-    }
-  }
   .container{
     text-align: center;
     img{
@@ -661,13 +661,144 @@ footer{
         font-family: "Open Sans",sans-serif;
         font-weight: bold;
         span{
-          color:#533A7B;
+          color:$mainPurple;
         }
       }
     }
   }
 }
 
+//CONTRIBUTION FORM
+
+.contribute-overlay{
+  position: fixed;
+  top:0;
+  display:none;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.8);
+  z-index: 30000;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity:0;
+  .blue-bar{
+    width: 350px;
+    padding: 10px 0;
+    background: $mainBlue;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    position: relative;
+    p{
+      color: white;
+      font-family: "Open Sans",sans-serif;
+      font-size: 25px;
+      line-height: 20px;
+      text-align: center;
+      .raised{
+        font-size:15px;
+      }
+    }
+    .close-button{
+      position: absolute;
+      right: 0;
+      top: -40px;
+      opacity: .7;
+      font-size: 20px;
+      cursor: pointer;
+      &:hover{
+        opacity:1;
+      }
+    }
+  }
+  .contribute-form{
+    height: 435px;
+    width: 350px;
+    background: white;
+    padding: 20px 40px 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    form{
+      label{
+        border-bottom: dotted thin #E7E7E7;
+        padding: 15px 10px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 24px;
+        color:#878787;
+        cursor:pointer;
+        width: 100%;
+        font-weight: 600;
+        display: block;
+        input[type="number"]{
+          width: 135px;
+          border: none;
+          border-bottom: 1px solid #d0d0d0;
+          outline: none;
+          padding: 0 4px
+        }
+        .custom-text{
+          font-weight: normal;
+          font-size: 13px;
+          position: relative;
+          left: 53px;
+          top: -10px;
+        }
+        &:hover{
+          color:black;
+        }
+        &:first-of-type{
+          padding-top:0;
+        }
+        &:last-of-type{
+          border-bottom: none;
+        }
+      }
+      .refund{
+        font-size: 13px;
+        text-align: center;
+        margin-top: 10px;
+        color:rgb(135, 135, 135);
+        .refund-page{
+          color: $mainBlue;
+          cursor: pointer;
+        }
+      }
+      button{
+        width: 100%;
+        background: $mainBlue;
+        border:none;
+        border-bottom: 3px solid #46808C;
+        border-radius: 5px;
+        color: white !important;
+        padding: 15px 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        margin-top: 20px;
+        &:hover{
+          background: #46808C;
+        }
+      }
+    }
+  }
+  .progress-bar{
+    width: 350px;
+    height: 10px;
+    border-radius: 25px;
+    background: #E5E5E5;
+    margin-top: 15px;
+    overflow:hidden;
+    .progress{
+      background: $mainOrange;
+      height: 100%;
+      width: 0;
+    }
+  }
+}
+.opacity{
+  opacity:1;
+}
 //MEDIA QUERIES
 @media screen and (max-width: 925px){
   .roadmap{
