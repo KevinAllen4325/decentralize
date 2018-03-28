@@ -289,7 +289,7 @@
         <p>$<span class="current-amount"></span><br><span class="raised">Total raised</span></p>
     </div>
     <div class="contribute-form">
-        <form action="/">
+        <form id="contributionForm" action="/">
             <label for="first"><input id="first" type="radio" name="amount" value="50" style="margin-right: 20px;" onchange="selected(this)"> $50.00</label>
 
             <label for="second"><input id="second" type="radio" name="amount" value="100" style="margin-right: 20px;" onchange="selected(this)"> $100.00</label>
@@ -377,6 +377,7 @@
 
 
     $('.contribute-button').on('click', function() {
+
         $('.contribute-overlay').css('display', 'flex');
         $('.contribute-overlay').addClass('opacity', 200)
 
@@ -386,6 +387,8 @@
         $('.contribute-overlay').fadeOut('fast');
         setTimeout(function() {
             $('.contribute-overlay').removeClass('opacity');
+            document.getElementById('contributionForm').reset()
+            $('label').css('color', '#878787');
         }, 200)
     });
 
