@@ -15,8 +15,8 @@ function calculateTotal () {
     percentOfTotal = Math.round(percentOfTotal * 100) / 100;
 
     //updates the progress bars
-    progressBarMain.style.width = `${percentOfTotal}%`;
-    progressBarForm.style.width = `${percentOfTotal}%`;
+    progressBarMain.style.width = percentOfTotal + "%";
+    progressBarForm.style.width = percentOfTotal + "%";
 }
 calculateTotal();
 
