@@ -12,8 +12,8 @@ function reset() {
     $('label').css('color', '#878787');
 }
 //Calculates total amount
-function calculateTotal () {
-    for(var i = 0; i < orders.length; i++){
+function calculateTotal() {
+    for (var i = 0; i < orders.length; i++) {
         currentAmount += orders[i];
     }
 
@@ -27,7 +27,7 @@ function calculateTotal () {
 calculateTotal();
 
 //puts commas in the proper space to display dollar amount
-function numberWithCommas (x) {
+function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
@@ -36,14 +36,14 @@ document.querySelector('.current-amount').innerHTML = numberWithCommas(currentAm
 
 function doSubmit() {
     //makes sure custom amount is positive number if selected
-    if ($('#fourth').is(':checked')){
-       if(parseInt($('#custom').val()) > 0){
-           $('#fourth').val($('#custom').val());
-       } else{
-           alert("You must enter a number greater than zero.");
-           reset();
-           return;
-       }
+    if ($('#fourth').is(':checked')) {
+        if (parseInt($('#custom').val()) > 0) {
+            $('#fourth').val($('#custom').val());
+        } else {
+            alert("You must enter a number greater than zero.");
+            reset();
+            return;
+        }
     }
 
     //Loop through radio buttons and get value of selected box
