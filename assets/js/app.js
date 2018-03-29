@@ -25,9 +25,15 @@ $(window).scroll(function() {
 
 //Smooth scroll to anchor
 $('.link').on('click',function (e) {
-    $('html, body').stop().animate({
-        'scrollTop': $($(this).attr('rel')).offset().top
-    }, 900, 'swing');
+    if($(this).attr('rel') != '#scroll' && $(this).attr('rel') != '#about'){
+        $('html, body').stop().animate({
+            'scrollTop': $($(this).attr('rel')).offset().top - 85
+        }, 900, 'swing');
+    } else{
+        $('html, body').stop().animate({
+            'scrollTop': $($(this).attr('rel')).offset().top
+        }, 900, 'swing');
+    }
 });
 
 //smooth mouse wheel scrolling using easeScroll jquery plugin
@@ -102,8 +108,6 @@ function selected(ele){
     else
         $('#custom').val('');
 }
-
-
 
 $('.contribute-button').on('click', function() {
     $('.contribute-overlay').css('display', 'flex');
