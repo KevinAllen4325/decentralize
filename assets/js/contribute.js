@@ -48,7 +48,8 @@ function doSubmit() {
 
     //Loop through radio buttons and get value of selected box
     $('input[name="amount"]:checked').each(function() {
-        formAmount = parseInt(this.value);
+        formAmount = parseFloat(this.value);
+        formAmount = Math.round(formAmount * 100) / 100;
     });
 
     orders.push(formAmount);
