@@ -6,18 +6,20 @@ var progressBarMain = document.getElementById('progress');
 var progressBarForm = document.getElementById('progress2');
 var formAmount = 0;
 
+//Resets form
+function reset() {
+    document.getElementById('contributionForm').reset()
+    $('label').css('color', '#878787');
+}
 //Calculates total amount
 function calculateTotal () {
     for(var i = 0; i < orders.length; i++){
         currentAmount += orders[i];
     }
 
-    console.log(currentAmount);
-
     percentOfTotal = (currentAmount / goalAmount * 100);
-    console.log(percentOfTotal);
     percentOfTotal = Math.round(percentOfTotal * 100) / 100;
-    console.log(percentOfTotal);
+
     //updates the progress bars
     progressBarMain.style.width = percentOfTotal + "%";
     progressBarForm.style.width = percentOfTotal + "%";
@@ -33,22 +35,24 @@ function numberWithCommas (x) {
 document.querySelector('.current-amount').innerHTML = numberWithCommas(currentAmount);
 
 function doSubmit() {
-    if($('#first').is(':checked')) {
-        formAmount = parseInt($('#first').val());
-    } else if ($('#second').is(':checked')){
-        formAmount = parseInt($('#second').val());
-    } else if ($('#third').is(':checked')){
-        formAmount = parseInt($('#third').val());
-    } else if ($('#fourth').is(':checked')){
-        formAmount = parseInt($('#custom').val());
+    //makes sure custom amount is positive number if selected
+    if ($('#fourth').is(':checked')){
+       if(parseInt($('#custom').val()) > 0){
+           $('#fourth').val($('#custom').val());
+       } else{
+           alert("You must enter a number greater than zero.");
+           reset();
+           return;
+       }
     }
+
+    //Loop through radio buttons and get value of selected box
+    $('input[name="amount"]:checked').each(function() {
+        formAmount = parseInt(this.value);
+    });
 
     orders.push(formAmount);
     currentAmount = 0;
     calculateTotal();
-    document.getElementById('contributionForm').reset()
-    $('label').css('color', '#878787');
-    console.log(orders)
+    reset();
 }
-
-
