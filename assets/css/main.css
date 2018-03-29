@@ -243,6 +243,8 @@ nav {
         cursor: pointer; }
         nav .container .nav-items span:hover {
           color: #58A4B0; }
+      nav .container .nav-items .active {
+        color: #58A4B0; }
     nav .container img {
       width: 55px;
       height: 55px; }
