@@ -713,32 +713,30 @@ footer {
     width: 100%;
     height: auto; }
 
-  header {
-    height: 100%; }
-    header .header-text {
-      display: block;
-      padding-top: 10vh; }
-      header .header-text h1 {
-        font-size: 30px;
-        line-height: 35px; }
-      header .header-text .logo {
-        flex-direction: column;
-        height: auto;
-        margin-bottom: 25px; }
-        header .header-text .logo img {
-          position: relative;
-          margin-right: 0px;
-          display: block;
-          width: 65px;
-          height: 65px; }
-        header .header-text .logo p {
-          display: block;
-          font-size: 25px; }
-      header .header-text .header-overlay {
-        padding: 0;
-        background: transparent; }
-        header .header-text .header-overlay #Stage_jbeeb_3 {
-          margin: 0 auto 20px !important; }
+  header .header-text {
+    display: block;
+    padding-top: 10vh; }
+    header .header-text h1 {
+      font-size: 30px;
+      line-height: 35px; }
+    header .header-text .logo {
+      flex-direction: column;
+      height: auto;
+      margin-bottom: 25px; }
+      header .header-text .logo img {
+        position: relative;
+        margin-right: 0px;
+        display: block;
+        width: 65px;
+        height: 65px; }
+      header .header-text .logo p {
+        display: block;
+        font-size: 25px; }
+    header .header-text .header-overlay {
+      padding: 0;
+      background: transparent; }
+      header .header-text .header-overlay #Stage_jbeeb_3 {
+        margin: 0 auto 20px !important; }
 
   footer .container img {
     width: 100px;
