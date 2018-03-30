@@ -16,45 +16,23 @@ var fixAbout = parseInt($('#about').offset().top);
 var fixTeam = parseInt($('#team').offset().top - 95);
 var fixRoadmap = parseInt($('#roadmap').offset().top - 95);
 
-function updateNavPosFull() {
-    fixNav = parseInt($('nav').offset().top);
-    fixAbout = parseInt($('#about').offset().top);
-    fixTeam = parseInt($('#team').offset().top - 95);
-    fixRoadmap = parseInt($('#roadmap').offset().top - 95);
-}
-
-function updateNavPos() {
-    fixAbout = parseInt($('#about').offset().top);
-    fixTeam = parseInt($('#team').offset().top - 95);
-    fixRoadmap = parseInt($('#roadmap').offset().top - 95);
-}
-
 $(window).scroll(function() {
     var currentScroll = $(window).scrollTop(); //Gets current scroll position
     var scrollPos = currentScroll;
 
     if (scrollPos >= fixTeam && scrollPos <= fixRoadmap) {
-        $('#teamLink').addClass('active');
-        $('#productLink').removeClass('active');
-        $('#roadmapLink').removeClass('active')
+        $('.teamLink').addClass('active');
+        $('.productLink').removeClass('active');
+        $('.roadmapLink').removeClass('active')
     } else if (scrollPos >= fixRoadmap) {
-        $('#roadmapLink').addClass('active');
-        $('#teamLink').removeClass('active');
-        $('#productLink').removeClass('active')
+        $('.roadmapLink').addClass('active');
+        $('.teamLink').removeClass('active');
+        $('.productLink').removeClass('active')
     } else {
-        $('#productLink').addClass('active');
-        $('#roadmapLink').removeClass('active')
-        $('#teamLink').removeClass('active');
+        $('.productLink').addClass('active');
+        $('.roadmapLink').removeClass('active')
+        $('.teamLink').removeClass('active');
     }
-
-    $(window).resize(function() {
-        if ($(window).scrollTop() < $('#about').offset().top - 95) {
-            updateNavPosFull()
-        } else {
-            updateNavPos()
-        }
-    }).resize();
-
 
     if (currentScroll >= fixNav) {
         $('nav').addClass('fixed-nav');
@@ -67,7 +45,7 @@ $(window).scroll(function() {
 
 //Smooth scroll to anchor
 $('.link').on('click', function(e) {
-    if ($(this).attr('rel') != '#scroll' && $(this).attr('rel') != '#about') {
+    if ($(this).attr('rel') != '#scroll') {
         $('html, body').stop().animate({
             'scrollTop': $($(this).attr('rel')).offset().top - 85
         }, 900, 'swing');
@@ -100,48 +78,70 @@ $('.to-top').on('click', function() {
 });
 
 window.sr = ScrollReveal();
-sr.reveal('.about .container', {
-    scale: 1,
-    origin: 'top',
-    duration: 500,
-    delay: 250
-});
-sr.reveal('.benefits .container', {
-    scale: 1,
-    duration: 500,
-    delay: 250
-});
-sr.reveal('.checkL', {
-    origin: 'left',
-    duration: 500,
-    delay: 250
-});
-sr.reveal('.checkR', {
-    origin: 'right',
-    duration: 500,
-    delay: 250
-});
-sr.reveal('.checkC', {
-    origin: 'bottom',
-    duration: 500,
-    delay: 250,
-    scale: 1
-});
 
-sr.reveal('.fade-top', {
-    origin: 'top',
-    scale: 1,
-    distance: 0,
-    duration: 500,
-    delay: 250
-});
-sr.reveal('.fade-top-name', {
-    origin: 'bottom',
-    scale: 1,
-    distance: 0,
-    duration: 500,
-    delay: 250
-});
+if(window.innerWidth > 800){
+    sr.reveal('.about .container', {
+        scale: 1,
+        origin: 'top',
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.benefits .container', {
+        scale: 1,
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.fade-top', {
+        origin: 'top',
+        scale: 1,
+        distance: 0,
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.fade-top-name', {
+        origin: 'bottom',
+        scale: 1,
+        distance: 0,
+        duration: 500,
+        delay: 250
+    });
+}
+
+if(window.innerWidth > 625){
+    sr.reveal('.checkL', {
+        origin: 'left',
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.checkR', {
+        origin: 'right',
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.checkC', {
+        origin: 'bottom',
+        duration: 500,
+        delay: 250,
+        scale: 1
+    });
+} else{
+    sr.reveal('.checkL', {
+        origin: 'right',
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.checkR', {
+        origin: 'right',
+        duration: 500,
+        delay: 250
+    });
+    sr.reveal('.checkC', {
+        origin: 'right',
+        duration: 500,
+        delay: 250,
+        scale: 1
+    });
+}
 
 function selected(ele) {
     $('#fourth').prop('checked', false);
