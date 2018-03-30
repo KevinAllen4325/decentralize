@@ -11,25 +11,6 @@ $mainOrange: #E78200;
   -webkit-font-smoothing: antialiased;
 }
 
-//Changes scrollbar style only on chrome. Any other browser will use default scrollbar
-//body::-webkit-scrollbar-track
-//{
-//  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-//  background-color: #F5F5F5
-//}
-//
-//body::-webkit-scrollbar
-//{
-//  width: 6px;
-//  background-color: #F5F5F5;
-//}
-//
-//body::-webkit-scrollbar-thumb
-//{
-//  border-radius: 10px;
-//  background-color: #333;
-//}
-
 body, html{
   height: 100%;
   overflow-x:hidden;
@@ -56,7 +37,7 @@ h2{
 }
 
 header{
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: rgba(83,58,123,1);
   background: -moz-linear-gradient(top, rgba(83,58,123,1) 0%, rgba(0,0,0,1) 100%);
@@ -973,12 +954,22 @@ footer{
     }
   }
   .about{
+    padding-top:50px;
     .container{
       img{
         width: 100%;
         height: auto;
       }
+      .about-text{
+        text-align: left;
+        h2{
+          font-size: 25px;
+        }
+      }
     }
+  }
+  .padding{
+    padding-top: 135px;
   }
   header{
     .header-text{
@@ -1026,6 +1017,9 @@ footer{
         }
       }
     }
+  }
+  h2{
+    font-size: 25px;
   }
 }
 

@@ -45,7 +45,7 @@ $(window).scroll(function() {
 
 //Smooth scroll to anchor
 $('.link').on('click', function(e) {
-    if ($(this).attr('rel') != '#scroll') {
+    if ($(this).attr('rel') != '#scroll' && $(this).attr('rel') != '#about') {
         $('html, body').stop().animate({
             'scrollTop': $($(this).attr('rel')).offset().top - 85
         }, 900, 'swing');
@@ -56,10 +56,8 @@ $('.link').on('click', function(e) {
     }
 });
 
-$('header').css({height: window.innerHeight})
-   $(window).resize(function() {
-       $('header').css({height: window.innerHeight})
-   })
+//Sets the height of the header so its always 100%
+$('header').css({height: window.innerHeight});
 
 //smooth mouse wheel scrolling using easeScroll jquery plugin
 $("html").easeScroll({
