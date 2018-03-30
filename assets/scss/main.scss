@@ -317,6 +317,7 @@ nav{
     }
   }
   .mobile{
+    display:none;
     i{
       font-size: 50px;
       display: block;
@@ -936,6 +937,9 @@ footer{
     .container{
       .desktop{
         display:none;
+      }
+      .mobile{
+        display:block;
       }
     }
   }
