@@ -270,6 +270,50 @@ nav {
       color: #d8d8d8; }
       nav .mobile i:hover {
         color: #58A4B0; }
+  nav .mobile-items {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    background: white;
+    top: 85px;
+    height: 0;
+    overflow: hidden; }
+    nav .mobile-items span {
+      text-decoration: none;
+      list-style: none;
+      display: block;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      color: #222;
+      padding: 15px;
+      cursor: pointer; }
+      nav .mobile-items span:first-of-type {
+        padding-top: 30px; }
+      nav .mobile-items span:hover {
+        color: #58A4B0; }
+      nav .mobile-items span:active {
+        color: #222; }
+      nav .mobile-items span:active {
+        color: #222; }
+    nav .mobile-items a {
+      text-decoration: none;
+      display: block;
+      list-style: none;
+      padding: 15px 15px 30px;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      color: #222;
+      cursor: pointer; }
+      nav .mobile-items a:hover {
+        color: #58A4B0; }
+      nav .mobile-items a:active {
+        color: #222; }
+      nav .mobile-items a:active {
+        color: #222; }
+    nav .mobile-items .active {
+      color: #58A4B0; }
+  nav .mobile-nav-open {
+    height: auto; }
 
 .fixed-nav {
   position: fixed;

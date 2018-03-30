@@ -329,6 +329,62 @@ nav{
       }
     }
   }
+  .mobile-items{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    background: white;
+    top: 85px;
+    height: 0;
+    overflow:hidden;
+    span{
+      text-decoration: none;
+      list-style:none;
+      display: block;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      color: #222;
+      padding: 15px;
+      cursor: pointer;
+      &:first-of-type{
+        padding-top:30px;
+      }
+      &:hover{
+        color: $mainBlue;
+      }
+      &:active{
+        color: #222;
+      }
+      &:active{
+        color: #222;
+      }
+    }
+    a{
+      text-decoration: none;
+      display: block;
+      list-style:none;
+      padding: 15px 15px 30px;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      color: #222;
+      cursor: pointer;
+      &:hover{
+        color: $mainBlue;
+      }
+      &:active{
+        color: #222;
+      }
+      &:active{
+        color: #222;
+      }
+    }
+    .active{
+      color: $mainBlue;
+    }
+  }
+  .mobile-nav-open{
+    height: auto;
+  }
 }
 
 .fixed-nav{

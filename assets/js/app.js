@@ -57,7 +57,7 @@ $('.link').on('click', function(e) {
 });
 
 //Sets the height of the header so its always 100%
-$('header').css({height: window.innerHeight});
+$('header, .contribute-overlay').css({height: window.innerHeight});
 
 //smooth mouse wheel scrolling using easeScroll jquery plugin
 $("html").easeScroll({
@@ -168,4 +168,22 @@ $('.close-button').on('click', function() {
         document.getElementById('contributionForm').reset()
         $('label').css('color', '#878787');
     }, 200)
+});
+
+//Open-close mobile navigation
+$('.fa-bars').on('click', function() {
+    $('.mobile-items').toggleClass('mobile-nav-open', 200);
+
+    if($('.mobile-items').hasClass('mobile-nav-open')){
+        $('.mobile i').css('color', '#d8d8d8')
+    } else{
+        $('.mobile i').css('color', '#58A4B0')
+    }
+});
+
+$('.mobile-items span, .mobile-items a').on('click', function() {
+    if($('.mobile-items').hasClass('mobile-nav-open')){
+        $('.mobile-items').toggleClass('mobile-nav-open', 400);
+        $('.mobile i').css('color', '#d8d8d8');
+    }
 });
