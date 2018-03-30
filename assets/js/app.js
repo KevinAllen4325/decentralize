@@ -56,6 +56,11 @@ $('.link').on('click', function(e) {
     }
 });
 
+$('header').css({height: window.innerHeight})
+   $(window).resize(function() {
+       $('header').css({height: window.innerHeight})
+   })
+
 //smooth mouse wheel scrolling using easeScroll jquery plugin
 $("html").easeScroll({
     frameRate: 60,
