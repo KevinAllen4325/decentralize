@@ -287,6 +287,23 @@ nav{
             color: #222;
           }
         }
+        a{
+          text-decoration: none;
+          list-style:none;
+          font-size: 14px;
+          font-family: "Open Sans", sans-serif;
+          color: #222;
+          cursor: pointer;
+          &:hover{
+            color: $mainBlue;
+          }
+          &:active{
+            color: #222;
+          }
+          &:active{
+            color: #222;
+          }
+        }
         .active{
           color: $mainBlue;
         }
@@ -834,7 +851,6 @@ footer{
     .container{
       .about-text{
         margin-left: 50px;
-        text-align: center;
       }
     }
   }
