@@ -73,13 +73,6 @@ $("html").easeScroll({
     arrowScroll: 50
 });
 
-$('.to-top').on('click', function() {
-    $("html, body").animate({
-        scrollTop: 0
-    }, 900, "swing");
-    return false;
-});
-
 window.sr = ScrollReveal();
 
 if(window.innerWidth > 800){
